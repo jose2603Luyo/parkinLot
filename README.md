@@ -16,19 +16,24 @@ C)Solution
 
 First, Let's identify the classes involved:
 
-a)ParkinLot=>Where the levels are placed
-  Relationship: 1..*(1 ParkinLot can have N levels)
-b)Level=> Where the parkingSlots are placed
-  Relationship: 1..*(1 Level can have N parkinSlots)
-c)ParkinSlots=> It's the spot where a car will be placed.
+  a) ParkinLot=>Where the levels are placed
+  Relationship: 1..N(1 ParkinLot can have N levels)
+ 
+  b) Level=> Where the parkingSlots are placed
+  Relationship: 1..N(1 Level can have N parkinSlots)
+  
+  c)ParkinSlots=> It's the spot where a car will be placed.
   RelationShip:1..1(1 parkinfSlot can allocate 1 car)
-d)car=>It's the current car we are allocatin
+  
+  d)car=>It's the current car we are allocatin
 
-e)Considerations:
+  e)Considerations:
   
   
   1.-We are not considering sizes for a car, they can be either small, medium or big.
+  
   2.-We are considerin 10 slots per row.(Just to make it easy)
+  
   3.-We'll provide 3 methods(park(), unPark() and findAvailableSpace()).
   
  
@@ -127,7 +132,8 @@ ParkinSlot.java
             return false;
         }else{
             freeSpace.park(car);
-     lyy       takenSlots.add(freeSpace);
+     //lyy
+     takenSlots.add(freeSpace);
             return true;
         }
     }
@@ -232,5 +238,8 @@ ParkingLot.java
           }
       }
 
+Time/Space Complexity
 
+As we are using LinkedList for removal and insertion operations, we have constant time O(1)
+We are noyt using extra space, we have O(1)
  
