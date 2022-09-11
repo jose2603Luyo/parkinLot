@@ -32,7 +32,7 @@ First, Let's identify the classes involved:
   
   1.-We are not considering sizes for a car, they can be either small, medium or big.
   
-  2.-We are considerin 10 slots per row.(Just to make it easy)
+  2.-We are considerin 10 slots per row.(Just to make it easy).
   
   3.-We'll provide 3 methods(park(), unPark() and findAvailableSpace()).
   
